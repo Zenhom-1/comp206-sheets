@@ -1,0 +1,215 @@
+<?php
+
+echo "<h3>Q1) Calculate Max And Grade.<br></h3>";
+
+$marks = array(
+    "Math" => 90,
+    "English" => 85,
+    "Science" => 95,
+    "History" => 100,
+    "Art" => 75
+    );
+$max = 0;
+$max_subject = "";
+foreach($marks as $subject => $mark){
+    if ($mark > $max) {
+        $max= $mark;
+        $max_subject = $subject;
+        }
+}
+echo "The Max Mark: ".$max." The subject: ".$max_subject."<br><br>";
+
+$total = 0;
+$average = 0;
+
+foreach ($marks as $mark) {
+        $total += $mark;
+    }
+$average = $total / count($marks);
+
+$grade = "";
+
+if ($average >= 90) {
+    $grade = "A";
+    } elseif ($average >= 80) {
+    $grade = "B";
+    } elseif ($average >= 70) {
+    $grade = "C";
+    } elseif ($average >= 60) {
+    $grade = "D";
+    } else {
+    $grade = "F";
+    }
+
+echo "The Average Mark is: ".$average." and The Grade is: ".$grade."<br><br>";
+
+echo"<hr>";
+
+echo "<h3>Q2) 2 Dimentional Array => Total Marks Are Greater Than Or Equal 400 And Average.<br></h3>";
+
+$markss = array(
+"Alice" => array(
+    "Math" => 90,
+    "English" => 85,
+    "Science" => 95,
+    "History" => 80,
+    "Art" => 75
+),
+"Bob" => array(
+    "Math" => 80,
+    "English" => 70,
+    "Science" => 85,
+    "History" => 75,
+    "Art" => 65
+),
+"Charlie" => array(
+    "Math" => 95,
+    "English" => 90,
+    "Science" => 100,
+    "History" => 85,
+    "Art" => 80
+),
+"David" => array(
+    "Math" => 70,
+    "English" => 60,
+    "Science" => 75,
+    "History" => 65,
+    "Art" => 55
+)
+);
+$average=0;
+$high_achievers= array();
+foreach ($markss as $student => $subjects) {
+    $totall = 0;
+    
+    foreach ($subjects as $mark) {
+        $totall += $mark;
+    }
+    $average+=$totall;
+    if ($totall >= 400) {
+        $high_achievers[] = $student;
+    }
+
+}
+
+echo"The Student Have Total Marks Are Greater Than Or Equal 400 is:";
+for($i=0;$i<count($high_achievers);$i++){
+    echo" $high_achievers[$i]" . " ";
+}
+echo"<br><br>";
+
+echo"The Average of all Student:".$average / 5;
+
+echo"<br><br>";
+
+echo"<hr>";
+
+echo "<h3>Q3) Find Prime Number Between 1 And 100.<br></h3>";
+
+$primes = array();
+for ($j = 2; $j <= 100; $j++) {
+    $flag=0;
+    for ($i = 2; $i * $i <= $j; $i++) {
+            if ($j % $i == 0) {
+                $flag++;
+            }
+    }
+    if($flag==0) {
+        $primes[] = $j;
+    }
+}
+$sump=0;
+foreach ($primes as $prime) {
+    $sump += $prime;
+    }
+echo"The Sum of prime Number Between 1 And 100 is: ".$sump."<br><br>";
+
+$indices = array();
+foreach ($primes as $index => $prime) {
+    $prime_str = strval($prime);
+    
+    if (strpos($prime_str, "9") !== false) {
+    $indices[] = $index;
+    }
+} 
+
+echo"The Index Number of digit 9 is: ";
+for($i=0;$i<count($indices);$i++){
+    echo" $indices[$i]" . " ";
+}
+
+echo"<br><br>";
+
+echo"<hr>";
+
+echo "<h3>Q4) Create an Associative Array of some Countries.<br></h3>";
+
+$countries = array(
+    "Egypt" => "Cairo",
+    "Germany" => "Berlin",
+    "Iraq" => "Baghdad",
+    "Palestine" => "Jerusalem",
+    "Lebanon" => "Beirut",
+    "France" => "Paris",
+    "Jordan" => "Amman",
+    "Tunisia" => "Tunis",
+    "Morocco" => "Rabat",
+    "Austria" => "Vienna"
+);
+
+asort($countries);
+foreach ($countries as $country => $capital) {
+    echo "$country - $capital"."<br>";
+}
+
+echo"<br>";
+
+$result = "";
+foreach ($countries as $country => $capital) {
+    if (strpos($country, "tine") !== false) {
+        $result = $capital;
+        break;
+    }
+}
+echo "The Country contain tine is : ".$result."<br>";
+
+echo"<br>";
+
+$longest = 0;
+$resultt = "";
+
+foreach ($countries as $country => $capital) {
+
+$length = strlen($country);
+
+if ($length > $longest) {
+        $longest = $length;
+        $resultt = $capital;
+    }
+}
+
+echo "Display The capital of the Country has longest string is : ".$resultt."<br>";
+
+echo"<br><br>";
+
+$reversed = array();
+    
+foreach ($countries as $country => $capital) {
+    $length = strlen($capital);
+    if ($length % 2 == 0) {
+    $reversed[$country] = strrev($capital);
+    } else {
+    $reversed[$country] = $capital;
+    }
+}
+
+echo "Reverse The capitals That have Even length : "."<br>";
+foreach ($reversed as $country => $capital) {
+        echo "$country - $capital"."<br>";
+}
+
+
+
+echo"<hr>";
+
+?>

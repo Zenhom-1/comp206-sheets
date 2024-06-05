@@ -1,0 +1,130 @@
+<?php 
+echo "<h3>Q1) Write a PHP program to construct the following patterns:<br><br></h3>";
+$x=5;
+for($i=1; $i<=$x; $i++) {
+  for($j=1; $j<=$i; $j++){
+    echo ' * ';
+  }
+echo '<br>';
+}
+for($i=1; $i<=$x; $i++) {
+  for($j=5; $j>=$i; $j--){
+    echo ' * ';
+  }
+echo '<br>';
+}
+echo '<br>';
+
+echo "<table cellspacing=0px border=1px>";
+for($row=1;$row<9;$row++){
+  echo "<tr>";
+  for($Col=1;$Col<9;$Col++) {
+    $total=$row+$Col;
+    if($total % 2 === 0){
+      echo "<td height=20px width=20px style=background-color:white></td>";
+    }
+    else {
+      echo "<td height=20px width=20px style=background-color:black></td>";
+    }
+  }
+  echo "</tr>";
+}
+echo "</table>";
+
+echo '<br>';
+echo '<hr>';
+
+echo "<h3>Q2) Write a PHP program to simulate a simple calculator:<br><br></h3>";
+
+$x=50;
+$y=30;
+echo"<table border=1px style=background-color:#ccc>";
+echo"<tr style=font-size:1.6em;><td>X + Y </td><td>". $x . '+' . $y." = </td><td>". ($x+$y) ."</td></tr>";
+echo"<tr style=font-size:1.6em;><td> X - Y </td><td>". $x . '-' . $y ." = </td><td>". ($x-$y) ."</td></tr>";
+echo"<tr style=font-size:1.6em;><td> X * Y </td><td>". $x . '*' . $y ." = </td><td>". ($x*$y) ."</td></tr>";
+echo"<tr style=font-size:1.6em;><td> X / Y </td><td>". $x . '/' . $y ." = </td><td>". ($x/$y) ."</td></tr>";
+echo"<tr style=font-size:1.6em;><td> X % Y </td><td>". $x . '%' . $y ." = </td><td>". ($x%$y) ."</td></tr>";
+echo"</table>";
+
+echo '<br>';
+echo '<hr>';
+
+echo "<h3>Q3) Write a PHP program to display the numbers from 1 to 100:<br><br></h3>";
+
+for($i=1;$i<=100;$i++){
+  if($i%3==0 && $i%5==0){
+      echo $i . " multiples of 3 and 5.<br>";
+  }
+  else if($i%3==0){
+      echo $i . " multiples of 3 .<br>";
+  }
+  elseif($i%5==0){
+      echo $i . " multiples of 5.<br>";
+  }
+}
+
+echo '<br>';
+echo '<hr>';
+
+echo "<h3>Q4) Write a PHP program to calculate the sum of the following series:<br><br></h3>";
+
+$sum1=0;
+$n=10;
+for($i=1;$i<=$n;$i++){
+  $sum1 += ( $i * $i );
+}
+$sum2=0;
+$n1=8;
+for($i=1;$i<=$n1;$i+=2){
+  $sum2 += ( $i * $i );
+}
+$sum3=0;
+$n2=9;
+$shara = 1;
+for($i=1;$i<=$n2;$i++){
+  $sum3 += ( $i * $i )*$shara;
+	$shara*=-1;
+}
+
+$sum4=0;
+$n4=8;
+for($i=1;$i<=$n4;$i++){
+	$fact=1;
+	for($j=1;$j<=$i;$j++){
+		$fact *= $j;
+	}
+	$sum4+=$fact;
+}
+
+$sum5=0;
+$n5=9;
+for($i=1;$i<=$n5;$i++){
+  $fact=1;
+	for($j=1;$j<=$i;$j++){
+		$fact *= $j;
+	}
+	$sum5+=($i+1)/$fact;
+}
+
+$sum6=0;
+$n6=7;
+$x=3;
+for($i=1;$i<=$n6;$i++){
+  $fact=1;
+	for($j=1;$j<=$i;$j++){
+		$fact *= $j;
+	}
+	$sum6+=($x**$i)/$fact;
+}
+
+echo"<table border=1px>";
+echo"<tr style=font-size:1.6em;><td>Sum1</td><td>". $sum1 ."</td></tr>";
+echo"<tr style=font-size:1.6em;><td>Sum2</td><td>". $sum2 ."</td></tr>";
+echo"<tr style=font-size:1.6em;><td>Sum3</td><td>". $sum3 ."</td></tr>";
+echo"<tr style=font-size:1.6em;><td>Sum4</td><td>". $sum4 ."</td></tr>";
+echo"<tr style=font-size:1.6em;><td>Sum5</td><td>". $sum5 ."</td></tr>";
+echo"<tr style=font-size:1.6em;><td>Sum6</td><td>". $sum6 ."</td></tr>";
+echo"</table>";
+?>
+
+

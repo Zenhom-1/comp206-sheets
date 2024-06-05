@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="h11">Question one (A) : Change head</h1>
+    <div class="q11">
+      <h2>Question Number One (A)</h2>
+      <h2>Question Number One (A)</h2>
+      <h2>Question Number One (A)</h2>
+      <button class="q114" onclick="headd()">Change Head</button>
+    </div>
+    <hr />
+    <h1 class="h11">Question one (B) : Change head</h1>
+    <div class="q11">
+      <p>Question Number One (B)</p>
+      <p>Question Number One (B)</p>
+      <p>Question Number One (B)</p>
+      <p>Question Number One (B)</p>
+      <span id="p11"></span>
+      <button class="q114" onclick="lengthh()">Length</button>
+    </div>
+    <hr />
+    <h1 class="h11">Question Two &nbsp; && &nbsp; Three : Add Student</h1>
+    <div class="q11 q2">
+      <label for="">ID</label>
+      <input type="text" id="p1" />
+      <label for="">Name</label>
+      <input type="text" id="p2" />
+      <label for="">Program</label>
+      <select id="p3">
+        <option>CS</option>
+        <option>CS-math</option>
+        <option>CS-stat</option>
+        <option>CS-physics</option>
+      </select>
+      <br /><br /><br />
+      <textarea name="some" cols="86" rows="10" id="o"></textarea>
+      <br /><br />
+      <button onclick="insert()" id="i" class="q116">Insert</button>
+      <button onclick="show()" class="q116">Show Textarea</button>
+      <button onclick="showt()" class="q116">Show Table</button>
+    </div>
+    <div id="st"></div>
+    <hr />
+    <h1 class="h11">Question Four : Form validation</h1>
+    <div class="q11 q4">
+      <form
+        style="display: grid; grid-auto-flow: row; max-width: 46ch"
+        action=""
+        method="user"
+        onsubmit="return validate(this)"
+      >
+        <label>
+          First Name <input type="text" id="firstName" class="q41" />
+        </label>
+        <label>
+          Family Name <input type="text" id="familyName" class="q42" />
+        </label>
+        <label>
+          Department <input type="text" id="department" class="q43"
+        /></label>
+        <label> salary <input type="text" id="salary" class="q44" /></label>
+        <label> age <input type="number" id="age" class="q45" /></label>
+        <label
+          >mobile
+          <input type="text" id="phone" pattern="[0-9]{11,11}" class="q46"
+        /></label>
+        <button class="q114">sign up</button>
+      </form>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: darksalmon;
+}
+.d1,
+.d2,
+.d3,
+.d4,
+.d5 {
+    margin: 20px 0;
+}
+#q1,
+#q11,
+
+#q3,
+#q33,
+#q4,
+#q44 {
+    margin-left: 30px;  
+    padding: 8px 40px;
+    border: none;
+    border-radius: 10px;
+}
+#q02,
+#q2,
+#q22,
+#q05, 
+#q5, 
+#q55,
+#s1,
+#s2,
+#s3,
+#s4,
+#s5 {
+    margin-left: 30px;  
+    padding: 8px 40px;
+    border: none;
+    border-radius: 10px;
+
+}
+button {
+    margin-top: 20px;
+    margin-left: 60px;
+    padding: 8px 50px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: darkslateblue;
+}
+#out {
+color: green;
+font-weight: bold;
+margin-top: 30px;
+margin-left: 20px;
+}
+.dd {
+    color: #673ab7;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+.zz {
+    color: green;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 20px;
+}
